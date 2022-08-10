@@ -1,0 +1,7 @@
+{
+  "name": "smozee",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

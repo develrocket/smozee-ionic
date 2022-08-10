@@ -1,0 +1,28 @@
+<!--
+  Generated template for the ScanCenterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Center Side</ion-title>
+        <ion-buttons end>
+            <button ion-button [disabled]="centerImg == ''" (click)="goNext()">
+                Next
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <button ion-button full icon-start (click)="capture()">
+        <ion-icon name="ios-camera-outline"></ion-icon>
+        Capture
+    </button>
+
+    <img [src]="centerImg" *ngIf="centerImg" style="margin-top: 20px;"/>
+</ion-content>

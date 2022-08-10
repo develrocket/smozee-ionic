@@ -1,0 +1,22 @@
+page-verify {
+    ion-content {
+        background: url('../../assets/imgs/background.jpg') no-repeat center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .bg-overlay {
+        background: white;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        z-index: -1;
+    }
+
+    ion-input {
+        background: none !important;
+    }
+}

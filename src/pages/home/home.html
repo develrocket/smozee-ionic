@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Dashboard</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <h4>Welcome Eric</h4>
+
+    <p>Your balance is RM 24.0</p>
+
+    <ion-list>
+        <ion-list-header>
+            Last Transaction
+        </ion-list-header>
+        <ion-item>
+            <ion-row>
+                <ion-col>Plate Number:</ion-col>
+                <ion-col>{{transaction.plate_no}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>Site:</ion-col>
+                <ion-col>{{transaction.site}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>In Time:</ion-col>
+                <ion-col>{{transaction.in_time}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>Out Time:</ion-col>
+                <ion-col>{{transaction.out_time}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>Amount:</ion-col>
+                <ion-col>{{transaction.amount}}</ion-col>
+            </ion-row>
+        </ion-item>
+        <ion-list-header>
+            Vehicles
+        </ion-list-header>
+        <ion-item>
+            <ion-item *ngFor="let item of vehicles">
+                <ion-avatar item-start>
+                    <img [src]="item.img">
+                </ion-avatar>
+                <h2>{{item.info}}</h2>
+                <p>{{item.plate_no}}</p>
+            </ion-item>
+        </ion-item>
+    </ion-list>
+</ion-content>

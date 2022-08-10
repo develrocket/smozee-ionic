@@ -1,0 +1,42 @@
+<!--
+  Generated template for the TransactionsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Transactions</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card *ngFor="let item of transactions">
+        <ion-card-content>
+            <ion-row>
+                <ion-col>Plate Number:</ion-col>
+                <ion-col>{{item.plate_no}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>Site:</ion-col>
+                <ion-col>{{item.site}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>In Time:</ion-col>
+                <ion-col>{{item.in_time}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>Out Time:</ion-col>
+                <ion-col>{{item.out_time}}</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>Amount:</ion-col>
+                <ion-col>{{item.amount}}</ion-col>
+            </ion-row>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
